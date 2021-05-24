@@ -21,7 +21,6 @@ const badgeEl = document.querySelector("header .badges");
 window.addEventListener(
   "scroll",
   _.throttle(function () {
-    console.log(window.scrollY);
     if (window.scrollY > 500) {
       // 배지숨기기
       // gsap.to(요소, 지속시간, 옵션)
@@ -48,4 +47,11 @@ fadeEls.forEach((fadeEl, index) => {
     delay: (index + 1) * 0.7, // 0.7, 1.4, 2.1, 2.7
     opacity: 1,
   });
+});
+
+// new Swiper(선택자, 옵션)
+new Swiper(".notice-line .swiper-container", {
+  direction: "vertical",
+  autoplay: true,
+  loop: true,
 });
