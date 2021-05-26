@@ -74,9 +74,22 @@ new Swiper(".promotion .swiper-container", {
   },
 });
 
+new Swiper(".awards .swiper-container", {
+  slidesPerView: 5, // 한번에 보여줄 슬라이드 개수
+  autoplay: {
+    delay: 3000,
+  },
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next",
+  },
+});
+
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
-
+// notice 센션의 프로모션 버튼 토글 시 화면 숨김
 promotionToggleBtn.addEventListener("click", () => {
   promotionEl.classList.toggle("hide");
 });
@@ -88,6 +101,7 @@ function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
 
+// youtube 섹션의 애니메이션 효과
 function floatingObject(selector, delay, size) {
   //gsap.to(요소, 시간, 옵션);
   gsap.to(
@@ -108,6 +122,7 @@ floatingObject(".floating1", 1, 15);
 floatingObject(".floating2", 0.5, 15);
 floatingObject(".floating3", 1.5, 20);
 
+// scrollMagic
 const spyEls = document.querySelectorAll("section.scroll-spy");
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({
@@ -117,3 +132,7 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
 });
+
+//footer 부분의 년도 자동 변경
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear();
