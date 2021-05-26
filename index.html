@@ -48,12 +48,14 @@
     />
     <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
     <meta property="twitter:url" content="https://starbucks.co.kr" />
+    <!-- Lodash -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
       integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- GSAP -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
       integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
@@ -64,6 +66,7 @@
     <script defer src="./js/youtube.js"></script>
     <script defer src="./js/main.js"></script>
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
@@ -77,7 +80,7 @@
               <a href="/signin">Sign In</a>
             </li>
             <li>
-              <a href="javascript:void(0)">My Starbuks</a>
+              <a href="javascript:void(0)">My Starbucks</a>
             </li>
             <li>
               <a href="javascript:void(0)">Customer Service & Ideas</a>
@@ -614,6 +617,40 @@
       </div>
     </section>
 
+    <!-- PICK YOUR FAVORITE -->
+    <section class="pick-your-favorite">
+      <div class="inner">
+        <div class="text-group">
+          <img src="./images/favorite_text1.png" alt="Text1" class="title" />
+          <img
+            src="./images/favorite_text2.png"
+            alt="Text2"
+            class="description"
+          />
+          <div class="more">
+            <a href="javascript:void(0)" class="btn btn--white">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVE STORE -->
+    <section class="reserve-store">
+      <div class="inner">
+        <div class="medal">
+          <div class="front">
+            <img
+              src="./images/reserve_store_medal_front.png"
+              alt="MEDAL_FRONT"
+            />
+          </div>
+          <div class="back">
+            <img src="./images/reserve_store_medal_back.png" alt="MEDAL_BACK" />
+            <a href="javascript:void(0)" class="btn">매장안내</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTER -->
     <footer></footer>
   </body>
